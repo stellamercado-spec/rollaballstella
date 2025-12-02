@@ -1,16 +1,19 @@
 using UnityEngine;
-
+using UnityEngine.InputSystem;
 public class playercontroller : MonoBehaviour
 {
+    private Rigidbdy rb;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+   rb = GetComponent <Rigidbody>();
     }
-
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
         
     }
+void OnMove (InputValue movementValue)
+ {
+  Vector2 movementVector= movementValue.Get<Vector2>();  
+ }  
 }
